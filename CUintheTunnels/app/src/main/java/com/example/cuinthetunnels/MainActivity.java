@@ -10,9 +10,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
+    Graph cuGraph;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        cuGraph = init(cuGraph);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -48,5 +50,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public Graph init(Graph g){
+        g = null;
+        return g;
     }
 }
