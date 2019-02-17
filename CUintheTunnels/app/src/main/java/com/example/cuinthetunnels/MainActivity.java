@@ -56,149 +56,199 @@ public class MainActivity extends AppCompatActivity {
         Node tb, ml, pa, sa, rh, lh, uc, gy, ac, me, mb, sc, hp, ru, la, nb, ro, gh, co, pg, dt;
         Node aa, sp, sr, ls, sd, mc, cc, tt, le, at, ap, nw, ph, fh, ah, hc, vs, ih, tc, fr, cb;
         Node rb, lx, gb, uh, ss, kh; //48 nodes
-        tb = new Node();
-        tb.name = "TB";
 
-        ml = new Node();
-        ml.name = "ML";
+        //Instantiate Nodes and set names
+        tb = new Node("TB");
 
-        pa = new Node();
-        pa.name = "PA";
+        ml = new Node("ML");
 
-        sa = new Node();
-        sa.name = "SA";
+        pa = new Node("PA");
 
-        rh = new Node();
-        rh.name = "RH";
+        sa = new Node("SA");
 
-        lh = new Node();
-        lh.name = "LH";
+        rh = new Node("RH");
 
-        uc = new Node();
-        uc.name = "UC";
+        lh = new Node("LH");
 
-        gy = new Node();
-        gy.name = "GY";
+        uc = new Node("UC");
 
-        ac = new Node();
-        ac.name = "AC";
+        gy = new Node("GY");
 
-        me = new Node();
-        me.name = "ME";
+        ac = new Node("AC");
 
-        mb = new Node();
-        mb.name = "MB";
+        me = new Node("ME");
 
-        sc = new Node();
-        sc.name = "SC";
+        mb = new Node("MB");
 
-        hp = new Node();
-        hp.name = "HP";
+        sc = new Node("SC");
 
-        ru = new Node();
-        ru.name = "RU";
+        hp = new Node("HP");
 
-        la = new Node();
-        la.name = "la";
+        ru = new Node("RU");
 
-        nb = new Node();
-        nb.name = "NB";
+        la = new Node("la");
 
-        ro = new Node();
-        ro.name = "RO";
+        nb = new Node("NB");
 
-        gh = new Node();
-        gh.name = "GH";
+        ro = new Node("RO");
 
-        co = new Node();
-        co.name = "CO";
+        gh = new Node("GH");
 
-        pg = new Node();
-        pg.name = "PG";
+        co = new Node("CO");
 
-        dt = new Node();
-        dt.name = "DT";
+        pg = new Node("PG");
 
-        aa = new Node();
-        aa.name = "AA";
+        dt = new Node("DT");
 
-        sp = new Node();
-        sp.name = "SP";
+        aa = new Node("AA");
 
-        sr = new Node();
-        sr.name = "SR";
+        sp = new Node("SP");
 
-        ls = new Node();
-        ls.name = "LS";
+        sr = new Node("SR");
 
-        sd = new Node();
-        sd.name = "SD";
+        ls = new Node("LS");
 
-        mc = new Node();
-        mc.name = "MC";
+        sd = new Node("SD");
 
-        cc = new Node();
-        cc.name = "CC";
+        mc = new Node("MC");
 
-        tt = new Node();
-        tt.name = "TT";
+        cc = new Node("CC");
 
-        le = new Node();
-        le.name = "LE";
+        tt = new Node("TT");
 
-        at = new Node();
-        at.name = "AT";
+        le = new Node("LE");
 
-        ap = new Node();
-        ap.name = "AP";
+        at = new Node("AT");
 
-        nw = new Node();
-        nw.name = "NW";
+        ap = new Node("AP");
 
-        ph = new Node();
-        ph.name = "PH";
+        nw = new Node("NW");
 
-        fh = new Node();
-        fh.name = "FH";
+        ph = new Node("PH");
 
-        ah = new Node();
-        ah.name = "AH";
+        fh = new Node("FH");
 
-        hc = new Node();
-        hc.name = "HC";
+        ah = new Node("AH");
 
-        vs = new Node();
-        vs.name = "VS";
+        hc = new Node("HC");
 
-        ih = new Node();
-        ih.name = "IH";
+        vs = new Node("VS");
 
-        tc = new Node();
-        tc.name = "TC";
+        ih = new Node("IH");
 
-        fr = new Node();
-        fr.name = "FR";
+        tc = new Node("TC");
 
-        cb = new Node();
-        cb.name = "CB";
+        fr = new Node("FR");
 
-        rb = new Node();
-        rb.name = "RB";
+        cb = new Node("CB");
 
-        lx = new Node();
-        lx.name = "LX";
+        rb = new Node("RB");
 
-        gb = new Node();
-        gb.name = "GB";
+        lx = new Node("LX");
 
-        uh = new Node();
-        uh.name = "UH";
+        gb = new Node("GB");
 
-        ss = new Node();
-        ss.name = "SS";
+        uh = new Node("UH");
 
-        kh = new Node();
-        kh.name = "KH";
+        ss = new Node("SS");
+
+        kh = new Node("KH");
+
+        //Dummy nodes for intersections
+        Node x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11, x12, x13; //Dummy Nodes
+        x1 = new Node(null);
+
+
+        //Instantiate and add edges
+        Edge tb_at = new Edge(tb, at);
+        Edge tb_uc = new Edge(tb, uc);
+        tb.addEdge(tb_at);
+        tb.addEdge(tb_uc);
+
+        Edge rh_ph = new Edge(rh, ph);
+        rh.addEdge(rh_ph);
+
+        Edge lh_fr = new Edge(lh, fr);
+        lh.addEdge(lh_fr);
+
+        Edge uc_tb = new Edge(uc, tb);
+        uc.addEdge(uc_tb);
+
+        Edge gy_ih = new Edge(gy, ih);
+        gy.addEdge(gy_ih);
+
+        Edge ac_fh = new Edge(ac, fh);
+        Edge ac_ah = new Edge(ac, ah);
+        Edge ac_x1 = new Edge(ac, x1);
+        ac.addEdge(ac_fh);
+        ac.addEdge(ac_ah);
+        ac.addEdge(ac_x1);
+
+        Edge me_mc = new Edge(me, mc);
+        Edge me_aa = new Edge(me, aa);
+        Edge me_cb = new Edge(me, cb);
+        me.addEdge(me_mc);
+        me.addEdge(me_aa);
+        me.addEdge(me_cb);
+
+        Edge sc_rb = new Edge(sc, rb);
+        sc.addEdge(sc_rb);
+
+        Edge nb_nw = new Edge(nb, nw);
+        nb.addEdge(nb_nw);
+
+        Edge gh_co = new Edge(gh, co);
+        gh.addEdge(gh_co);
+
+        Edge co_gh = new Edge(co, gh);
+        Edge co_sd = new Edge(co, sd);
+        co.addEdge(co_gh);
+        co.addEdge(co_sd);
+
+        Edge aa_me = new Edge(aa, me);
+        aa.addEdge(aa_me);
+
+        Edge sr_hc = new Edge(sr, hc);
+        sr.addEdge(sr_hc);
+
+        Edge sd_co = new Edge(sd, co);
+        sd.addEdge(sd_co);
+
+        Edge mc_me = new Edge(mc, me);
+        mc.addEdge(mc_me);
+
+        Edge at_tb = new Edge(at, tb);
+        at.addEdge(at_tb);
+
+        Edge nw_nb = new Edge(nw, nb);
+        nw.addEdge(nw_nb);
+
+        Edge fh_ac = new Edge(fh, ac);
+        fh.addEdge(fh_ac);
+
+        Edge ah_ac = new Edge(ah, ac);
+        ah.addEdge(ah_ac);
+
+        Edge ih_gy = new Edge(ih, gy);
+        ih.addEdge(ih_gy);
+
+        Edge hc_la = new Edge(hc, la);
+        hc.addEdge(hc_la);
+
+        Edge fr_ph = new Edge(fr, ph);
+        Edge fr_lh = new Edge(fr, lh);
+        fr.addEdge(fr_ph);
+        fr.addEdge(fr_lh);
+
+        Edge cb_me = new Edge(cb, me);
+        cb.addEdge(cb_me);
+
+        Edge rb_sc = new Edge(rb, sc);
+        rb.addEdge(rb_sc);
+
+        Edge x1_ac = new Edge(x1, ac);
+        x1.addEdge(x1_ac);
+
         return g;
     }
 }

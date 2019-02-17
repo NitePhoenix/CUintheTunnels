@@ -3,5 +3,9 @@ package com.example.cuinthetunnels;
 import java.util.List;
 
 public class Graph {
-    List<Node> nodes;
+    private List<Node> nodes;
+
+    public void addNode(Node n){
+        nodes.add(n);
+    }
 }

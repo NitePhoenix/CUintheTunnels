@@ -4,5 +4,13 @@ import java.util.List;
 
 public class Node {
     public String name;
-    public List<Edge> connections;
+    private List<Edge> connections = null;
+
+    public Node(String name){
+        this.name = name;
+    }
+
+    public void addEdge(Edge e){
+        connections.add(e);
+    }
 }
