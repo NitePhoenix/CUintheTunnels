@@ -1,4 +1,0 @@
-#Sat Feb 16 13:56:25 EST 2019
-base.0=C\:\\Users\\Andrew\\Documents\\GitHub\\CUintheTunnels\\CUintheTunnels\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\9
-path.0=classes.dex
-renamed.0=classes.dex
