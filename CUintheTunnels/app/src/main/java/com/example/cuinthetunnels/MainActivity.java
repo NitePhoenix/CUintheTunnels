@@ -6,10 +6,20 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class MainActivity extends AppCompatActivity {
+
+    private Spinner startLocation, endLocation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +28,11 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        addItemsOnstartLocation();
+        addItemsOnendLocation();
+
+        /*
+        // email button on bottom right
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -26,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        */
     }
 
     @Override
@@ -48,5 +64,25 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void addItemsOnstartLocation () {
+        startLocation = (Spinner) findViewById(R.id.startLocation);
+        List<String> list = new ArrayList<String>();
+        list.add("Tory");
+        list.add("UC");
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, list);
+        dataAdapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        startLocation.setAdapter(dataAdapter);
+    }
+
+    public void addItemsOnendLocation () {
+        endLocation = (Spinner) findViewById(R.id.endLocation);
+        List<String> list = new ArrayList<String>();
+        list.add("Stacie");
+        list.add("River");
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, list);
+        dataAdapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        endLocation.setAdapter(dataAdapter);
     }
 }
