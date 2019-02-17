@@ -10,9 +10,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
+    Graph cuGraph;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        cuGraph = initGraph(cuGraph);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -48,5 +50,155 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public Graph initGraph(Graph g){
+        Node tb, ml, pa, sa, rh, lh, uc, gy, ac, me, mb, sc, hp, ru, la, nb, ro, gh, co, pg, dt;
+        Node aa, sp, sr, ls, sd, mc, cc, tt, le, at, ap, nw, ph, fh, ah, hc, vs, ih, tc, fr, cb;
+        Node rb, lx, gb, uh, ss, kh; //48 nodes
+        tb = new Node();
+        tb.name = "TB";
+
+        ml = new Node();
+        ml.name = "ML";
+
+        pa = new Node();
+        pa.name = "PA";
+
+        sa = new Node();
+        sa.name = "SA";
+
+        rh = new Node();
+        rh.name = "RH";
+
+        lh = new Node();
+        lh.name = "LH";
+
+        uc = new Node();
+        uc.name = "UC";
+
+        gy = new Node();
+        gy.name = "GY";
+
+        ac = new Node();
+        ac.name = "AC";
+
+        me = new Node();
+        me.name = "ME";
+
+        mb = new Node();
+        mb.name = "MB";
+
+        sc = new Node();
+        sc.name = "SC";
+
+        hp = new Node();
+        hp.name = "HP";
+
+        ru = new Node();
+        ru.name = "RU";
+
+        la = new Node();
+        la.name = "la";
+
+        nb = new Node();
+        nb.name = "NB";
+
+        ro = new Node();
+        ro.name = "RO";
+
+        gh = new Node();
+        gh.name = "GH";
+
+        co = new Node();
+        co.name = "CO";
+
+        pg = new Node();
+        pg.name = "PG";
+
+        dt = new Node();
+        dt.name = "DT";
+
+        aa = new Node();
+        aa.name = "AA";
+
+        sp = new Node();
+        sp.name = "SP";
+
+        sr = new Node();
+        sr.name = "SR";
+
+        ls = new Node();
+        ls.name = "LS";
+
+        sd = new Node();
+        sd.name = "SD";
+
+        mc = new Node();
+        mc.name = "MC";
+
+        cc = new Node();
+        cc.name = "CC";
+
+        tt = new Node();
+        tt.name = "TT";
+
+        le = new Node();
+        le.name = "LE";
+
+        at = new Node();
+        at.name = "AT";
+
+        ap = new Node();
+        ap.name = "AP";
+
+        nw = new Node();
+        nw.name = "NW";
+
+        ph = new Node();
+        ph.name = "PH";
+
+        fh = new Node();
+        fh.name = "FH";
+
+        ah = new Node();
+        ah.name = "AH";
+
+        hc = new Node();
+        hc.name = "HC";
+
+        vs = new Node();
+        vs.name = "VS";
+
+        ih = new Node();
+        ih.name = "IH";
+
+        tc = new Node();
+        tc.name = "TC";
+
+        fr = new Node();
+        fr.name = "FR";
+
+        cb = new Node();
+        cb.name = "CB";
+
+        rb = new Node();
+        rb.name = "RB";
+
+        lx = new Node();
+        lx.name = "LX";
+
+        gb = new Node();
+        gb.name = "GB";
+
+        uh = new Node();
+        uh.name = "UH";
+
+        ss = new Node();
+        ss.name = "SS";
+
+        kh = new Node();
+        kh.name = "KH";
+        return g;
     }
 }
